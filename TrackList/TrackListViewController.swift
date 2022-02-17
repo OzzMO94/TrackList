@@ -14,7 +14,7 @@ class TrackListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80
-
+        navigationItem.rightBarButtonItem = editButtonItem
     }
 
     // MARK: - Table view data source
@@ -38,15 +38,37 @@ class TrackListViewController: UITableViewController {
         
         return cell
     }
-}
+
 
 // MARK: - Table view delegate
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        80
 //    }
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        .none
+    }
+    
+    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        false
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let currentTrack = trackList.remove(at: sourceIndexPath.row)
+        trackList.insert(currentTrack, at: destinationIndexPath.row)
+    }
 
 
 // MARK: - Navigation
-func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let trackDetailsVC = segue.destination as? TrackDetailsViewController else {return}
+        guard let indexPath = tableView.indexPathForSelectedRow else {return}
+        let track = trackList[indexPath.row]
+        trackDetailsVC.track = track
+    }
 }

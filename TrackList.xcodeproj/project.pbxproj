@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		941AAAE927BE636300C51BF4 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941AAAE827BE636300C51BF4 /* TrackListViewController.swift */; };
 		941AAAEB27BE6A9E00C51BF4 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941AAAEA27BE6A9E00C51BF4 /* Track.swift */; };
+		941AAAED27BE843000C51BF4 /* TrackDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941AAAEC27BE843000C51BF4 /* TrackDetailsViewController.swift */; };
 		9444DA5427B5B16100ED109D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444DA5327B5B16100ED109D /* AppDelegate.swift */; };
 		9444DA5627B5B16100ED109D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444DA5527B5B16100ED109D /* SceneDelegate.swift */; };
 		9444DA5B27B5B16100ED109D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9444DA5927B5B16100ED109D /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		941AAAE827BE636300C51BF4 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
 		941AAAEA27BE6A9E00C51BF4 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		941AAAEC27BE843000C51BF4 /* TrackDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsViewController.swift; sourceTree = "<group>"; };
 		9444DA5027B5B16100ED109D /* TrackList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9444DA5327B5B16100ED109D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9444DA5527B5B16100ED109D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				9444DA5327B5B16100ED109D /* AppDelegate.swift */,
 				9444DA5527B5B16100ED109D /* SceneDelegate.swift */,
 				941AAAE827BE636300C51BF4 /* TrackListViewController.swift */,
+				941AAAEC27BE843000C51BF4 /* TrackDetailsViewController.swift */,
 				941AAAEA27BE6A9E00C51BF4 /* Track.swift */,
 				9444DA5927B5B16100ED109D /* Main.storyboard */,
 				9444DA5C27B5B16200ED109D /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				9444DA5427B5B16100ED109D /* AppDelegate.swift in Sources */,
 				9444DA5627B5B16100ED109D /* SceneDelegate.swift in Sources */,
+				941AAAED27BE843000C51BF4 /* TrackDetailsViewController.swift in Sources */,
 				941AAAE927BE636300C51BF4 /* TrackListViewController.swift in Sources */,
 				941AAAEB27BE6A9E00C51BF4 /* Track.swift in Sources */,
 			);

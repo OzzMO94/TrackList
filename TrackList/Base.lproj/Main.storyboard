@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,6 +40,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="I7v-Or-pfg" kind="show" id="46e-Cl-mBr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -51,6 +55,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jrf-Em-9s9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="817" y="25"/>
+        </scene>
+        <!--Track Details View Controller-->
+        <scene sceneID="d4Q-gz-hat">
+            <objects>
+                <viewController id="I7v-Or-pfg" customClass="TrackDetailsViewController" customModule="TrackList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a8l-oy-S4J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MM9-xA-Oup">
+                                <rect key="frame" x="16" y="160" width="382" height="380"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6eu-QI-udd">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="339.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNr-Oo-ww9">
+                                        <rect key="frame" x="0.0" y="359.5" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="6dn-hc-yvo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ico-lC-vnW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MM9-xA-Oup" firstAttribute="top" secondItem="Ico-lC-vnW" secondAttribute="top" constant="20" id="gM6-uM-5Nf"/>
+                            <constraint firstItem="MM9-xA-Oup" firstAttribute="leading" secondItem="Ico-lC-vnW" secondAttribute="leading" constant="16" id="om6-Jn-6IQ"/>
+                            <constraint firstItem="Ico-lC-vnW" firstAttribute="trailing" secondItem="MM9-xA-Oup" secondAttribute="trailing" constant="16" id="pDw-1v-Xeq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xC0-Kj-T3x"/>
+                    <connections>
+                        <outlet property="imageCover" destination="6eu-QI-udd" id="r3a-Am-mFz"/>
+                        <outlet property="trackTitleLabel" destination="dNr-Oo-ww9" id="9Eg-nj-TWP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hu0-xf-Pop" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vu9-9e-IND">
